@@ -1,0 +1,15 @@
+testApplication\client\login\LoginView.class
+testApplication\client\AuthServiceAsync.class
+testApplication\client\ProjectEntryPoint$1.class
+testApplication\client\ProjectEntryPoint.class
+testApplication\client\login\LoginResources$MyCss.class
+testApplication\client\AuthService.class
+testApplication\server\HibernateUtil.class
+testApplication\client\login\GreetingPage$GreetingUiBinder.class
+testApplication\client\login\LoginViewImpl$1.class
+testApplication\client\login\LoginResources.class
+testApplication\client\login\LoginViewImpl$LoginUiBinder.class
+testApplication\server\AuthServiceImpl.class
+testApplication\client\login\GreetingPage.class
+testApplication\shared\User.class
+testApplication\client\login\LoginViewImpl.class

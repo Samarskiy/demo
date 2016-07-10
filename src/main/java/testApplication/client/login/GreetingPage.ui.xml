@@ -1,0 +1,11 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
+
+    <gwt:HTMLPanel>
+        <div align="left">
+            <gwt:VerticalPanel>
+                <gwt:Label ui:field="textBox" text="Добрый день, Иван" styleName="textBox"/>
+            </gwt:VerticalPanel>
+        </div>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

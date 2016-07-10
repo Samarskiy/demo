@@ -1,0 +1,3 @@
+# Module Project
+# RPC service class, partial path of RPC policy file
+testApplication.client.AuthService, 4B1F751F09519AF053A36840C4E6CFB7.gwt.rpc

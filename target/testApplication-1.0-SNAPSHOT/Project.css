@@ -1,0 +1,13 @@
+
+.picture {
+border-bottom: 3px solid black;
+}
+
+.simplePanel {
+    padding: 10px;
+}
+
+.textBox {
+    font-size: 30px;
+    font-weight: bolder;
+}

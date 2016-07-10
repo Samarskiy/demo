@@ -1,0 +1,2 @@
+serviceClass: testApplication.client.AuthService
+path: 4B1F751F09519AF053A36840C4E6CFB7.gwt.rpc
