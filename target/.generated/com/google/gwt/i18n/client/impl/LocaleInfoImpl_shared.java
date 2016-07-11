@@ -17,6 +17,8 @@ public class LocaleInfoImpl_shared extends com.google.gwt.i18n.client.impl.Local
   public String[] getAvailableLocaleNames() {
     return new String[] {
       "default",
+      "en",
+      "ru",
     };
   }
   
@@ -30,6 +32,8 @@ public class LocaleInfoImpl_shared extends com.google.gwt.i18n.client.impl.Local
     } else {
       if (nativeDisplayNamesJava == null) {
         nativeDisplayNamesJava = new HashMap<String, String>();
+        nativeDisplayNamesJava.put("en", "English");
+        nativeDisplayNamesJava.put("ru", "русский");
       }
       return nativeDisplayNamesJava.get(localeName);
     }
@@ -42,6 +46,8 @@ public class LocaleInfoImpl_shared extends com.google.gwt.i18n.client.impl.Local
   
   private native JavaScriptObject loadNativeDisplayNamesNative() /*-{
     return {
+      "en": "English",
+      "ru": "русский"
     };
   }-*/;
 }

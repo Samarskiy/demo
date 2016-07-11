@@ -29,7 +29,7 @@ public class AuthServiceImpl extends RemoteServiceServlet implements
 
     @Override
     public List<User> getAllUsers() {
-        Query query =  session.createQuery("from User");
+        Query query = session.createQuery("from User");
         usersList = query.list();
         return usersList;
     }
@@ -38,15 +38,16 @@ public class AuthServiceImpl extends RemoteServiceServlet implements
     public User authorizedUser(String login, String password) {
         List<User> result = getAllUsers();
         logger.info("Comparing the login and password");
-        for (User user: result) {
-            if (login.equals(user.getUsername()) && hashPasswordAndSault(password).equals(user.getPassword())){
+        for (User user : result) {
+            if (login.equals(user.getUsername()) && hashPasswordAndSault(password).equals(user.getPassword())) {
                 logger.info("User find....");
                 return user;
             }
-        } return null;
+        }
+        return null;
     }
 
-    public  String hashPasswordAndSault(String name){
+    public String hashPasswordAndSault(String name) {
         name += "sault";
         MessageDigest messageDigest = null;
         byte[] digest = new byte[0];
@@ -63,7 +64,7 @@ public class AuthServiceImpl extends RemoteServiceServlet implements
         BigInteger bigInt = new BigInteger(1, digest);
         String md5Hex = bigInt.toString(16);
 
-        while( md5Hex.length() < 32 ){
+        while (md5Hex.length() < 32) {
             md5Hex = "0" + md5Hex;
         }
 

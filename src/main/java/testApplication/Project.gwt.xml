@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.0//EN"
-  "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
+        "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
 <module rename-to='Project'>
-  <!-- Inherit the core Web Toolkit stuff. -->
-  <inherits name='com.google.gwt.user.User' />
+    <!-- Inherit the core Web Toolkit stuff. -->
+    <inherits name='com.google.gwt.user.User'/>
 
-  <inherits name="com.google.gwt.logging.Logging"/>
+    <!-- Logging -->
+    <inherits name="com.google.gwt.logging.Logging"/>
 
-  <!-- Other module inherits -->
-  <inherits name='com.sencha.gxt.ui.GXT' />
+    <!-- Other module inherits -->
+    <inherits name='com.sencha.gxt.ui.GXT'/>
 
-  <!-- GXT Stylesheet -->
-  <stylesheet src="reset.css" />
 
-  <!-- GXT Theme -->
-  <!-- <inherits name='com.sencha.gxt.theme.blue.Blue'/> -->
-  <!-- <inherits name='com.sencha.gxt.theme.gray.Gray' /> -->
-  <inherits name="com.sencha.gxt.theme.neptune.Theme" />
+    <!-- Internationalization -->
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    <extend-property name="locale" values="ru"/>
+    <extend-property name="locale" values="en"/>
 
-  <!-- Specify the app entry point class. -->
-  <entry-point class='testApplication.client.ProjectEntryPoint' />
+    <!-- GXT Stylesheet -->
+    <stylesheet src="reset.css"/>
 
-  <!-- Inherit the UiBinder module.                               -->
-  <inherits name="com.google.gwt.uibinder.UiBinder"/>
+    <!-- GXT Theme -->
+    <inherits name="com.sencha.gxt.theme.neptune.Theme"/>
 
-  <!-- Specify the paths for translatable code -->
-  <source path='client' />
-  <source path='shared' />
+    <!-- Specify the app entry point class. -->
+    <entry-point class='testApplication.client.ProjectEntryPoint'/>
 
-  <set-property name="gwt.logging.logLevel" value="INFO"/>
-  <set-property name="gwt.logging.enabled" value="TRUE"/>
-  <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
-  <set-property name="gwt.logging.popupHandler" value="DISABLED" />
+    <!-- Inherit the UiBinder module.                               -->
+    <inherits name="com.google.gwt.uibinder.UiBinder"/>
 
-  <!-- http://docs.sencha.com/gxt/3.1/getting_started/sdm/SuperDevMode.html -->
-  <!-- Use this when GWT < 2.7 -->
-  <add-linker name="xsiframe" />
+    <!-- Specify the paths for translatable code -->
+    <source path='client'/>
+    <source path='shared'/>
+
+    <!-- Logging properties-->
+    <set-property name="gwt.logging.logLevel" value="INFO"/>
+    <set-property name="gwt.logging.enabled" value="TRUE"/>
+    <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+    <set-property name="gwt.logging.popupHandler" value="DISABLED"/>
+
+    <!-- http://docs.sencha.com/gxt/3.1/getting_started/sdm/SuperDevMode.html -->
+    <!-- Use this when GWT < 2.7 -->
+    <add-linker name="xsiframe"/>
 
 </module>

@@ -14,6 +14,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import testApplication.client.AuthService;
 import testApplication.client.AuthServiceAsync;
+import testApplication.client.Constants;
 import testApplication.shared.User;
 
 import java.util.logging.Logger;
@@ -22,6 +23,7 @@ public class LoginViewImpl extends Composite implements LoginView {
     private static LoginUiBinder uiBinder = GWT.create(LoginUiBinder.class);
     AuthServiceAsync authService = com.google.gwt.core.shared.GWT.create(AuthService.class);
     public static final Logger logger = Logger.getLogger(LoginViewImpl.class.getName());
+    Constants constants = com.google.gwt.core.shared.GWT.create(Constants.class);
 
     @UiTemplate("LoginViewImpl.ui.xml")
     interface LoginUiBinder extends UiBinder<Widget, LoginViewImpl> {
@@ -80,13 +82,15 @@ public class LoginViewImpl extends Composite implements LoginView {
             completionLabel1.setText("");
         }
     }
-    @UiHandler("loginBox" )
+
+    @UiHandler("loginBox")
     void handleLoginKeyboardKey(KeyDownEvent event) {
         if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
             Window.alert("Sumbit by Enter!");
         }
     }
-    @UiHandler("passwordBox" )
+
+    @UiHandler("passwordBox")
     void handlePasswordKeyboardKey(KeyDownEvent event) {
         if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
             Window.alert("Sumbit by Enter!");
@@ -104,10 +108,10 @@ public class LoginViewImpl extends Composite implements LoginView {
         }
     }
 
-    private  void initialGreeting (User user){
-        if (user != null){
+    private void initialGreeting(User user) {
+        if (user != null) {
             RootPanel.get().clear();
-            RootPanel.get().add(new GreetingPage(user.getUsername()));
+            RootPanel.get().add(new GreetingPage());
         } else Window.alert("User not found");
     }
 

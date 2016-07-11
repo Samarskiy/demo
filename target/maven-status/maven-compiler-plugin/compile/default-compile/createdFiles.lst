@@ -6,6 +6,7 @@ testApplication\client\login\LoginResources$MyCss.class
 testApplication\client\AuthService.class
 testApplication\server\HibernateUtil.class
 testApplication\client\login\GreetingPage$GreetingUiBinder.class
+testApplication\client\Constants.class
 testApplication\client\login\LoginViewImpl$1.class
 testApplication\client\login\LoginResources.class
 testApplication\client\login\LoginViewImpl$LoginUiBinder.class

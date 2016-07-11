@@ -16,7 +16,7 @@ import com.google.gwt.user.client.ui.Widget;
 public class GreetingPage_GreetingUiBinderImpl implements UiBinder<com.google.gwt.user.client.ui.Widget, testApplication.client.login.GreetingPage>, testApplication.client.login.GreetingPage.GreetingUiBinder {
 
   interface Template extends SafeHtmlTemplates {
-    @Template("<div align='right'> <span id='{0}'></span> </div>")
+    @Template("<div align='left'> <span id='{0}'></span> </div>")
     SafeHtml html1(String arg0);
      
   }
@@ -127,7 +127,6 @@ public class GreetingPage_GreetingUiBinderImpl implements UiBinder<com.google.gw
       final com.google.gwt.user.client.ui.Label textBox = (com.google.gwt.user.client.ui.Label) GWT.create(com.google.gwt.user.client.ui.Label.class);
       // Setup section.
       textBox.setStyleName("textBox");
-      textBox.setText("Добрый день, Иван");
 
 
       this.owner.textBox = textBox;

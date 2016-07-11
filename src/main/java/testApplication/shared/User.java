@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "user", schema = "", catalog = "javatest")
-public class User implements Serializable{
+public class User implements Serializable {
     private String username;
     private String password;
 

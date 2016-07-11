@@ -4,7 +4,7 @@
     <gwt:HTMLPanel>
         <div align="left">
             <gwt:VerticalPanel>
-                <gwt:Label ui:field="textBox" text="Добрый день, Иван" styleName="textBox"/>
+                <gwt:Label ui:field="textBox" styleName="textBox"/>
             </gwt:VerticalPanel>
         </div>
     </gwt:HTMLPanel>
